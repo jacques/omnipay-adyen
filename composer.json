@@ -3,7 +3,11 @@
     "description": "Adyen driver for the Omnipay payment processing library",
     "keywords": [
         "omnipay",
-        "adyen"
+        "adyen",
+        "gateway",
+        "merchant",
+        "pay",
+        "payment"
     ],
     "homepage": "https://github.com/jacques/omnipay-adyen",
     "license": "MIT",
@@ -12,15 +16,21 @@
             "name": "Jacques Marneweck",
             "email": "jacques@siberia.co.za",
             "homepage": "http://www.siberia.co.za/"
+        },
+        {
+            "name": "Omnipay Contributors",
+            "homepage": "https://github.com/jacques/omnipay-adyen/contributors"
         }
     ],
     "require": {
-        "omnipay/common": "v3.0-alpha.2"
+        "omnipay/common": "^3.0.1"
     },
     "require-dev": {
-        "omnipay/tests": "~3.0",
-        "squizlabs/php_codesniffer": "^3",
-        "phpro/grumphp": "^0.14"
+        "omnipay/tests": "^3.1",
+        "overtrue/phplint": "^1",
+        "phpmd/phpmd": "^2",
+        "phpro/grumphp": "^0.14",
+        "squizlabs/php_codesniffer": "^3"
     },
     "autoload": {
         "psr-4": {
@@ -43,5 +53,9 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
 }
